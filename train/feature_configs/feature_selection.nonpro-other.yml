@@ -1,0 +1,48 @@
+TFBS:
+- CTCF-chipseq
+- POLR2A-chipseq
+histone:
+- H3K27me3-max
+- H3K36me3-max
+- H3K36me3.10bp-max
+RBP:
+- HepG2-RBP
+- K562-RBP
+mmsplice:
+- MMS_alt_acceptor
+- MMS_alt_acceptorIntron
+- MMS_alt_donor
+- MMS_alt_donorIntron
+- MMS_delta_logit_psi
+- MMS_efficiency
+- MMS_ref_acceptor
+- MMS_ref_donor
+- MMS_ref_donorIntron
+basic:
+- PLS
+- length
+- splicing
+AF:
+- gnomAD.v3.AF
+cons-ext:
+- phastCons100way-max
+- phastCons100way.10bp-max
+- phastCons100way.10bp-mean
+- phastCons46way.primates-mean
+- phastCons46way.primates.10bp-mean
+- phastCons46way.vertebrate-max
+- phastCons46way.vertebrate-mean
+- phastCons46way.vertebrate.100bp-mean
+- phastCons46way.vertebrate.10bp-max
+- phastCons46way.vertebrate.10bp-mean
+- phyloP100way-max
+- phyloP100way-mean
+- phyloP100way.100bp-max
+- phyloP100way.10bp-max
+- phyloP100way.10bp-mean
+- phyloP46way.primates-max
+- phyloP46way.primates.100bp-mean
+- phyloP46way.vertebrate-mean
+- phyloP46way.vertebrate.100bp-max
+- phyloP46way.vertebrate.10bp-max
+- phyloP46way.vertebrate.10bp-mean
