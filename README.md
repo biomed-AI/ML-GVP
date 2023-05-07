@@ -1,2 +1,2 @@
 # ML-GVE
-The ML-GVE is the model for Critical Assessment of Genome Interpretation (CAGI6-Sherloc) competition. The code is upgraded from the chenkenbio(https://github.com/chenkenbio/CAGI6-Sherloc-model.git). It is one of the best performance models in the competition.
+The ML-GVE was a machine learning model for predicting the pathogenicity of variants in both coding and non-coding regions. It was designed for the 6-th Critical Assessment of Genome Interpretation (CAGI6-Sherloc) competition. And it was one of the best performance models in the competition. The program was modified based on the chenkenbio/CAGI6-Sherloc-model(https://github.com/chenkenbio/CAGI6-Sherloc-model.git). 
