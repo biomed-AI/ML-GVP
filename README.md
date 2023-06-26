@@ -8,19 +8,19 @@ The script *run_predict.sh* were used for predicing the pathogenicity of mutatio
 
 ## Folds
 ### train
-The fold **train** included all codes used for training a ML-GVE model. 
+The folder **train** included all codes used for training a ML-GVE model. 
 
 
 ### src
-The fold **src** included all other scipts except those for model training.
+The folder **src** included all other scipts except those for model training.
 
 
 ### caseStudy
-The fold **caseStudy** included the mutations from denovo-db dataset which was used for caseStudy in the paper.
+The folder **caseStudy** included the mutations from denovo-db dataset which was used for caseStudy in the paper.
 
 ### cagi6-sherloc
-The fold **cagi6-sherloc** included all training the test data which were provided by CAGI6.
+The folder **cagi6-sherloc** included all training the test data which were provided by CAGI6.
 
 
 ### ablation
-The fold **ablation** included those bash scripts which were used for ablation study.
+The folder **ablation** included those bash scripts which were used for ablation study.
