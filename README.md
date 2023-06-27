@@ -11,8 +11,8 @@ The script [`./prepare_features.sh`](https://github.com/biomed-AI/ML-GVE/blob/ma
 The script [`./run_predict.sh`](https://github.com/biomed-AI/ML-GVE/blob/master/run_predict.sh) can be used for predicing the pathogenicity of mutations after preparing features.
 
 ## Repository Structure and Usage
-[`./train`](https://github.com/biomed-AI/ML-GVE/blob/master/train/) included all codes used for training an ML-GVE model.
-[`./src`](https://github.com/biomed-AI/ML-GVE/blob/master/src/) included all other scripts except those for model training.
-[`./caseStudy`](https://github.com/biomed-AI/ML-GVE/blob/master/caseStudy/) included the mutations from *denovo-db* dataset which was collected for case study in the paper.
-[`./cagi6-sherloc`](https://github.com/biomed-AI/ML-GVE/blob/master/cagi6-sherloc/) inlcuded all training and test data which were provided by CAGI6 competition.
+[`./train`](https://github.com/biomed-AI/ML-GVE/blob/master/train/) included all codes used for training an ML-GVE model.\
+[`./src`](https://github.com/biomed-AI/ML-GVE/blob/master/src/) included all other scripts except those for model training.\
+[`./caseStudy`](https://github.com/biomed-AI/ML-GVE/blob/master/caseStudy/) included the mutations from *denovo-db* dataset which was collected for case study in the paper.\
+[`./cagi6-sherloc`](https://github.com/biomed-AI/ML-GVE/blob/master/cagi6-sherloc/) inlcuded all training and test data which were provided by CAGI6 competition.\
 [`./ablation`](https://github.com/biomed-AI/ML-GVE/blob/master/ablation/) included those scripts used for ablation study.
