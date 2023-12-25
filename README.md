@@ -1,4 +1,4 @@
-# ML-GVE
+# Multi-level feature Genomic Variants Estimator (ML-GVE)
 
 **ML-GVE** is an XGBoost-based model for predicting pathogenicity of variants in exons and introns. It was originally designed for the [Sherloc challenge](https://genomeinterpretation.org/cagi6-invitae.html) in the 6th Critical Assessment of Genome Interpretation. The model is one of the two best-performing models in the Sherloc challenge, ranking the first for overall and indel prediction. This repository extended the original implementation ([chenkenbio/CAGI6-Sherloc-model](https://github.com/chenkenbio/CAGI6-Sherloc-model)) and provided scripts for additional analysis and experiments.
 
@@ -40,7 +40,7 @@ done
  - `hg19_phastCons_46way_primates`: [`download`](http://hgdownload.cse.ucsc.edu/goldenpath/hg19/phastCons46way/primates.phastCons46way.bw)
  - `hg19_phyloP_46way_primates`: [`download`](http://hgdownload.cse.ucsc.edu/goldenpath/hg19/phyloP46way/primates.phyloP46way.bw)
  - `hg19_phastCons_46way_vertebrate`: [`download`](http://hgdownload.cse.ucsc.edu/goldenpath/hg19/phastCons46way/vertebrate.phastCons46way.bw)
- - `hg19_phyloP_46way_vertebrate`: [`download`](http://hgdownload.cse.ucsc.edu/goldenpath/hg19/phyloP46way/vertebrate.phyloP46way.bw)
+ - `hg19_phyloP_46way_vertebrate`: [`download`](http://hgdownload.cse.ucsc.edu/goldenpath/hg19/phyloP46way/vertebrate.phyloP46way.bw) \
 Or download the above files in bigWig format in data/ucsc/hg19 using
 
 ```
@@ -52,9 +52,17 @@ wget -c http://hgdownload.cse.ucsc.edu/goldenpath/hg19/phastCons46way/vertebrate
 wget -c http://hgdownload.cse.ucsc.edu/goldenpath/hg19/phastCons100way/hg19.100way.phastCons.bw  
 ```
 
-## Bash Scripts
- - The script `./prepare_features.sh` can be executed to collect the features for the mutations given.
- - The script `./run_predict.sh` is used for predicing the pathogenicity of mutations after preparing features.
+## Demo
+1. Prepare features:
+```
+./prepare_features.sh input.vcf hg19 output
+```
+After executing the command, the file about features can be found at `output/input.std.avinput.features-ALL.tsv`
+2. Make prediction
+```
+./run_prediction.sh output/input.stc.avinput.features-ALL.tsv
+```
+The prediction scores can be found at `input.std.avinput.features-ALL_rfecv.output.txt`. The scores of ML-GVE(meta) can be found at `features-ALL_rfecv.meta.output.txt`
 
 ## Repository Structure and Usage
 [`./train`](https://github.com/biomed-AI/ML-GVE/blob/master/train/) included all codes used for training an ML-GVE model.\
