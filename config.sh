@@ -1,16 +1,14 @@
-#!/bin/bash
-
 export MAX_THREADS=16
 
 export ANNOVAR_BIN="/home/chenken/tools/annovar"
 export ANNOVAR_DB="/home/chenken/db/annovar/humandb"
-export blastp="/home/chenken/opt/miniconda3/envs/blast/bin/blastp"
+export blastp="/home/dingml/anaconda3/envs/blast/bin/blastp"
 
 
 ## reference dataset
 export hg19="/home/chenken/db/gencode/GRCh37/GRCh37.primary_assembly.genome.fa"
 export hg38="/home/chenken/db/gencode/GRCh38/GRCh38.primary_assembly.genome.fa"
-export hg19_gtf="/bigdat1/pub/gencode/GRCh37/release_34/gencode.v34lift37.annotation.gtf"
+export hg19_gtf="/home/dingml/db/gencode/GRCh37/release_34/gencode.v34lift37.annotation.gtf"
 
 export PSSM_SPOT_PATH="$WORKING_DIR/data/PSSM-HHM-SPOT_DISORDER"
 
@@ -35,7 +33,3 @@ export hg19_phyloP_46way_vertebrate="$WORKING_DIR/data/ucsc/hg19/vertebrate.phyl
 # use GPU
 export LD_LIBRARY_PATH="/home/chenken/opt/miniconda3/envs/mmsplice-gpu/lib:$LD_LIBRARY_PATH"
 export mmsplice_python=/home/chenken/opt/miniconda3/envs/mmsplice-gpu/bin/python3
-# export LD_LIBRARY_PATH="/home/dingml/anaconda3/envs/mmsplic/lib:$LD_LIBRARY_PATH"
-# export mmsplice_python=/home/dingml/anaconda3/envs/mmsplice/bin/python3 
-## or use CPU
-#export mmsplice_python=`which python3`  # path to python with mmsplice installed
