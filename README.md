@@ -51,6 +51,7 @@ wget -c http://hgdownload.cse.ucsc.edu/goldenpath/hg19/phastCons46way/primates.p
 wget -c http://hgdownload.cse.ucsc.edu/goldenpath/hg19/phastCons46way/vertebrate.phastCons46way.bw
 wget -c http://hgdownload.cse.ucsc.edu/goldenpath/hg19/phastCons100way/hg19.100way.phastCons.bw  
 ```
+ - MMSplice: install mmsplice and set `mmsplice_python` to the python interpreter with MMSplice installed
 
 ## Demo
 1. Prepare features:
@@ -62,7 +63,7 @@ After executing the command, the file about features can be found at `output/inp
 ```
 ./run_prediction.sh output/input.stc.avinput.features-ALL.tsv
 ```
-The prediction scores can be found at `input.std.avinput.features-ALL_rfecv.output.txt`. The scores of ML-GVE(meta) can be found at `features-ALL_rfecv.meta.output.txt`
+The prediction scores can be found at `input.std.avinput.features-ALL_rfecv.output.txt`. The scores of ML-GVE(meta) can be found at `input.std.avinput.features-ALL_rfecv.meta.output.txt`
 
 ## Repository Structure and Usage
 [`./train`](https://github.com/biomed-AI/ML-GVE/blob/master/train/) included all codes used for training an ML-GVE model.\
