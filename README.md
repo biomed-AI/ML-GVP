@@ -4,6 +4,14 @@
 
 ## System Requirements and Installation
 ML-GVE was trained on Linux. The key system requirements are Python (>3.8) and XGBoost (xgboost-gpu>1.6.2). The databases used for collecting features were list in [`./config.sh`](https://github.com/biomed-AI/ML-GVE/blob/master/config.sh).
+ - ANNOVAR
+ - blast: NCBI BLAST
+ - MMSplice
+ - bedtools
+ - pyBigWig
+ - XGBoost
+ - CrossMap
+ - skopt(required only during training process)
 
 ## Bash Scripts
 The configuration about the path of databases(including RoadMap, gnomAD and ENCODE, etc) and other bioinformatic tools (such as MMSplice, annovar, etc) were list in the script [`./config.sh`](https://github.com/biomed-AI/ML-GVE/blob/master/config.sh).
