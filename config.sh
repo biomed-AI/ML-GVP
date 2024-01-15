@@ -1,3 +1,5 @@
+#!/bin/bash
+
 export MAX_THREADS=16
 
 export ANNOVAR_BIN="/home/chenken/tools/annovar"
@@ -31,5 +33,12 @@ export hg19_phyloP_46way_vertebrate="$WORKING_DIR/data/ucsc/hg19/vertebrate.phyl
 
 ## setup mmsplice
 # use GPU
-export LD_LIBRARY_PATH="/home/chenken/opt/miniconda3/envs/mmsplice-gpu/lib:$LD_LIBRARY_PATH"
-export mmsplice_python=/home/chenken/opt/miniconda3/envs/mmsplice-gpu/bin/python3
+export LD_LIBRARY_PATH="/home/dingml/anaconda3/envs/mmsplic/lib:$LD_LIBRARY_PATH"
+export mmsplice_python=/home/dingml/anaconda3/envs/mmsplice/bin/python3 
+## or use CPU
+#export mmsplice_python=`which python3`  # path to python with mmsplice installed
+
+
+
+## Ensemble Predictors
+export ensemble_dir="/home/dingml/documents/CAGI6-Sherloc-model-main/data/ensemble_predictors"
