@@ -12,6 +12,7 @@ ML-GVE was trained on Linux. The key system requirements are Python (>3.8) and X
  - [`XGBoost`](https://xgboost.readthedocs.io/en/stable/)
  - [`CrossMap`](https://crossmap.sourceforge.net/#installation)
  - [`skopt`](https://scikit-optimize.github.io/)(required only during training process)
+ - [`tabix`](https://pypi.org/project/pytabix/) (required to builed the .tbi file for ensemble predictors)
 
 ## Configure config.sh
 Set the paths in [`./config.sh`](https://github.com/biomed-AI/ML-GVE/blob/master/config.sh):
@@ -52,6 +53,7 @@ wget -c http://hgdownload.cse.ucsc.edu/goldenpath/hg19/phastCons46way/vertebrate
 wget -c http://hgdownload.cse.ucsc.edu/goldenpath/hg19/phastCons100way/hg19.100way.phastCons.bw  
 ```
  - MMSplice: install mmsplice and set `mmsplice_python` to the python interpreter with MMSplice installed
+ - ensemble_dir: the directory including CADD, MVP, M-CAP, PrimateAI, AlphaMissense (BED file and .tbi file)
 
 ## Demo
 1. Prepare features:
