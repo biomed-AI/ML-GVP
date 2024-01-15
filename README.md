@@ -53,7 +53,7 @@ wget -c http://hgdownload.cse.ucsc.edu/goldenpath/hg19/phastCons46way/vertebrate
 wget -c http://hgdownload.cse.ucsc.edu/goldenpath/hg19/phastCons100way/hg19.100way.phastCons.bw  
 ```
  - MMSplice: install mmsplice and set `mmsplice_python` to the python interpreter with MMSplice installed
- - ensemble_dir: the directory including [`CADD`](https://pubmed.ncbi.nlm.nih.gov/30371827/), [`MVP`](https://pubmed.ncbi.nlm.nih.gov/33479230/), [`M-CAP`](https://pubmed.ncbi.nlm.nih.gov/27776117/), [`PrimateAI`](https://pubmed.ncbi.nlm.nih.gov/30038395/), [`AlphaMissense`](https://github.com/google-deepmind/alphamissense) (BED file and .tbi file)
+ - ensemble_dir: the directory including [`CADD`](https://pubmed.ncbi.nlm.nih.gov/30371827/), [`MVP`](https://pubmed.ncbi.nlm.nih.gov/33479230/), [`M-CAP`](https://pubmed.ncbi.nlm.nih.gov/27776117/), [`PrimateAI`](https://pubmed.ncbi.nlm.nih.gov/30038395/), [`AlphaMissense`](https://github.com/google-deepmind/alphamissense) score (VCF file and .tbi file)
 
 ## Demo
 1. Prepare features:
