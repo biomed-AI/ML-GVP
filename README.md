@@ -63,7 +63,7 @@ wget -c http://hgdownload.cse.ucsc.edu/goldenpath/hg19/phastCons100way/hg19.100w
 After executing the command, the file about features can be found at `output/input.std.avinput.features-ALL.tsv`
 2. Make prediction
 ```
-./run_prediction.sh output/input.stc.avinput.features-ALL.tsv
+./run_prediction.sh output/input.stc.avinput.features-ALL.tsv predict_dir
 ```
 The prediction scores can be found at `input.std.avinput.features-ALL_rfecv.output.txt`. The scores of ML-GVE(meta) can be found at `input.std.avinput.features-ALL_rfecv.meta.output.txt`
 
