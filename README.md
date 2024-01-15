@@ -1,9 +1,9 @@
-# Multi-level feature Genomic Variants Estimator (ML-GVE)
+# Multi-level feature Genomic Variants Estimator (ML-GVP)
 
-**ML-GVE** is an XGBoost-based model for predicting pathogenicity of variants in exons and introns. It was originally designed for the [Sherloc challenge](https://genomeinterpretation.org/cagi6-invitae.html) in the 6th Critical Assessment of Genome Interpretation. The model is one of the two best-performing models in the Sherloc challenge, ranking the first for overall and indel prediction. This repository extended the original implementation ([chenkenbio/CAGI6-Sherloc-model](https://github.com/chenkenbio/CAGI6-Sherloc-model)) and provided scripts for additional analysis and experiments.
+**ML-GVP** is an XGBoost-based model for predicting pathogenicity of variants in exons and introns. It was originally designed for the [Sherloc challenge](https://genomeinterpretation.org/cagi6-invitae.html) in the 6th Critical Assessment of Genome Interpretation. The model is one of the two best-performing models in the Sherloc challenge, ranking the first for overall and indel prediction. This repository extended the original implementation ([chenkenbio/CAGI6-Sherloc-model](https://github.com/chenkenbio/CAGI6-Sherloc-model)) and provided scripts for additional analysis and experiments.
 
 ## System Requirements and Installation
-ML-GVE was trained on Linux. The key system requirements are Python (>3.8) and XGBoost (xgboost-gpu>1.6.2). The databases used for collecting features were list in [`./config.sh`](https://github.com/biomed-AI/ML-GVE/blob/master/config.sh).
+ML-GVP was trained on Ubuntu. The key requirements are Python (>3.8) and XGBoost (xgboost-gpu>1.6.2). The databases used for collecting features were list in [`./config.sh`](https://github.com/biomed-AI/ML-GVP/blob/master/config.sh).
  - [`ANNOVAR`](https://annovar.openbioinformatics.org/en/latest/)
  - [`blast: NCBI BLAST`](https://blast.ncbi.nlm.nih.gov/Blast.cgi)
  - [`MMSplice`](https://github.com/gagneurlab/MMSplice_MTSplice)
@@ -15,7 +15,7 @@ ML-GVE was trained on Linux. The key system requirements are Python (>3.8) and X
  - [`tabix`](https://pypi.org/project/pytabix/) (required to builed the .tbi file for ensemble predictors)
 
 ## Configure config.sh
-Set the paths in [`./config.sh`](https://github.com/biomed-AI/ML-GVE/blob/master/config.sh):
+Set the paths in [`./config.sh`](https://github.com/biomed-AI/ML-GVP/blob/master/config.sh):
  - `blastp`: path of the tool [`blast: NCBI BLAST`](https://blast.ncbi.nlm.nih.gov/Blast.cgi)
  - `hg19/hg38`: GRCh37(hg19)/GRCh38(hg38) reference genome, can be visited from [`here`](https://grch37.ensembl.org/index.html) 
  - `hg19_gtf`: hg19 gene annotation in GTF format
@@ -53,19 +53,20 @@ wget -c http://hgdownload.cse.ucsc.edu/goldenpath/hg19/phastCons46way/vertebrate
 wget -c http://hgdownload.cse.ucsc.edu/goldenpath/hg19/phastCons100way/hg19.100way.phastCons.bw  
 ```
  - MMSplice: install mmsplice and set `mmsplice_python` to the python interpreter with MMSplice installed
- - ensemble_dir: the directory including CADD, MVP, M-CAP, PrimateAI, AlphaMissense (BED file and .tbi file)
+ - ensemble_dir: the directory including [`CADD`](https://pubmed.ncbi.nlm.nih.gov/30371827/), [`MVP`](https://pubmed.ncbi.nlm.nih.gov/33479230/), [`M-CAP`](https://pubmed.ncbi.nlm.nih.gov/27776117/), [`PrimateAI`](https://pubmed.ncbi.nlm.nih.gov/30038395/), [`AlphaMissense`](https://github.com/google-deepmind/alphamissense) (BED file and .tbi file)
 
 ## Demo
 1. Prepare features:
 ```
 ./prepare_features.sh input.vcf hg19 output
 ```
-After executing the command, the file about features can be found at `output/input.std.avinput.features-ALL.tsv`
+After executing the command, the features file curated for variants can be found at `output/input.std.avinput.features-ALL.tsv` 
+
 2. Make prediction
 ```
 ./run_prediction.sh output/input.stc.avinput.features-ALL.tsv predict_dir
 ```
-The prediction scores can be found at `input.std.avinput.features-ALL_rfecv.output.txt`. The scores of ML-GVE(meta) can be found at `input.std.avinput.features-ALL_rfecv.meta.output.txt`
+The prediction scores can be found at `input.std.avinput.features-ALL_rfecv.output.txt`. The scores of ML-GVP+ can be found at `input.std.avinput.features-ALL_rfecv.meta.output.txt`
 
 ## Repository Structure and Usage
 [`./train`](https://github.com/biomed-AI/ML-GVE/blob/master/train/) included all codes used for training an ML-GVE model.\
